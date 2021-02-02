@@ -1,0 +1,32 @@
+/*** Progress Bar ***/
+
+progress {
+	// [-webkit-appearance: progress-bar] overwrites everything by default
+	-webkit-appearance: none;
+
+	display: block;
+	width: 90%;
+	margin: 12px auto;
+	margin-top: 18px;
+
+	height: 26px;
+
+	.border-inverted();
+
+	&::-webkit-progress-bar {
+		background: @dark-primary;
+		padding: 4px;
+	}
+
+	&::-webkit-progress-value {
+		height: 16px;
+		background: repeating-linear-gradient(
+			to right,
+			@darksecondary,
+			@darksecondary 8px,
+			@dark-primary 1px,
+			@dark-primary 12px
+		);
+
+	}
+}

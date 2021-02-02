@@ -1,0 +1,99 @@
+/*** Form Controls: Buttons, Checkboxes, Radio Buttons, Text Fields, etc. ***/
+
+button, 
+input[type=button],
+input[type=reset],
+input[type=submit],
+input[type=color],
+::-webkit-file-upload-button {
+	color: white;
+	background-color: @light-primary;
+	height: 25px;
+	min-width: 75px;
+
+	cursor: pointer;
+	.border();
+	//font-family: Arial;
+
+	&:active {
+		.border-inverted();
+	}
+
+	&:focus {
+		outline: 1px dashed @shadedark;
+		outline-offset: -4px;
+	}
+
+	//letter-spacing: 1px;
+	font-weight: lighter;
+
+	//text-transform: uppercase;
+	text-align: left;
+	:not(input[type=color]) {
+		padding-right: 5%;
+	}
+	-webkit-font-smoothing: none;
+}
+
+input[type=checkbox] {
+	vertical-align: middle;
+
+	appearance: none;
+	width: 15px;
+	height: 15px;
+	.border-inverted();
+
+	&:focus {
+		outline: 1px dotted black;
+		outline-offset: -2px;
+	}
+	&:checked {
+		background-image: url("checkmark.png");
+	}
+}
+
+input[type=radio] {
+	vertical-align: text-bottom;
+
+	appearance: none;
+	width: 15px;
+	height: 15px;
+	background-image: url("radio_off.png");
+	
+	&:focus {
+		outline: 1px dotted black;
+	}
+	&:checked {
+		background-image: url("radio_on.png");
+	}
+}
+
+input[type=text],
+input[type=tel],
+input[type=search],
+input[type=password],
+input[type=email],
+input[type=url],
+input[type=number],
+input[type=date],
+input[type=datetime-local],
+input[type=month],
+input[type=week],
+input[type=time],
+input[list],
+select,
+textarea {
+	.border-inverted();
+	color: inherit;
+	background: @dark-primary;
+
+	&:focus {
+		outline: 1px dotted black;
+		outline-offset: -3px;
+	}
+}
+
+// calendar and clock icons on date pickers
+::-webkit-calendar-picker-indicator {
+	filter: brightness(0) invert() brightness(70%);
+}

@@ -1,0 +1,62 @@
+/*** Window ***/
+
+.window, .box {
+    position: static;
+	background-color: @light-primary;
+	padding: @default-pad;
+	box-sizing: border-box;
+	margin: 0 0 20px;
+	max-width: @window-width;
+
+}
+
+.titlebar, .window:not(.headless)::before {
+	display: block;
+	position: relative;
+	margin-bottom: 1em;
+
+	width: 100%;
+	height: @titlebar-height;
+
+	line-height: @titlebar-height;
+
+	text-indent: 24px;
+	background-image: url("steamico.png"), url("minimize.png"), url("close.png");
+	background-repeat: no-repeat;
+	background-position: top left, top right 20px, top right;
+}
+
+.window {
+	// titlebar
+	&:not(.headless) {
+		// titlebar
+		&:before {
+			content: attr(name);
+		}
+	}
+
+	&:not(.no-resize) {
+		// resize handle
+		&::after {
+			width: 12px;
+			height: 12px;
+			display: block;
+			margin: 0 0 0 auto;
+
+			position: relative;
+			bottom: -7px;
+			right: -7px;
+			cursor: nwse-resize;
+
+			content: '';
+			background-image: url("resize.png");
+
+		}
+	}
+}
+
+.window.half, .window-row .window {
+	max-width: @window-half;
+	width: 100%;
+	align-self: flex-start;
+}

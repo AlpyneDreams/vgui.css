@@ -1,0 +1,287 @@
+body {
+  background-color: #3e4637;
+  font-family: "Trebuchet MS";
+  color: #d8ded3;
+  font-size: 14px;
+  image-rendering: pixelated;
+  margin: 20px 20px;
+}
+h1,
+h2 {
+  color: #c4b550;
+  margin: 3px 12px 12px;
+}
+h1 {
+  font-size: 18px;
+}
+h2 {
+  font-size: 16px;
+}
+p {
+  font-family: "Verdana";
+  text-align: left;
+  margin: 12px 12px 12px;
+  color: #d8ded3;
+}
+button {
+  color: white;
+  background-color: #4c5844;
+  height: 25px;
+  min-width: 75px;
+  cursor: pointer;
+  border-top: solid 1px #899281;
+  border-bottom: solid 1px #292d23;
+  border-left: solid 1px #899281;
+  border-right: solid 1px #292d23;
+  font-family: Arial;
+  letter-spacing: 1px;
+  font-weight: lighter;
+  text-transform: uppercase;
+  -webkit-font-smoothing: none;
+}
+button:active {
+  border-top: solid 1px #292d23;
+  border-bottom: solid 1px #899281;
+  border-left: solid 1px #292d23;
+  border-right: solid 1px #899281;
+  background-color: #3e4637;
+}
+button:focus {
+  outline: none;
+}
+code {
+  background: #3e4637;
+  padding: 0 3px;
+}
+hr {
+  margin: 20px 0;
+  border: none;
+  height: 1px;
+  background-color: #3e4637;
+}
+img {
+  object-fit: contain;
+  margin: 2px;
+}
+nav {
+  border-top: solid 1px #899281;
+  border-bottom: solid 1px #292d23;
+  border-left: solid 1px #899281;
+  border-right: solid 1px #292d23;
+  padding: 0;
+  list-style: none;
+  background: #4c5844;
+  margin-bottom: 20px;
+}
+nav li {
+  display: inline-block;
+  position: relative;
+  line-height: 21px;
+  text-align: left;
+  cursor: pointer;
+}
+nav li a {
+  display: block;
+  padding: 8px 25px;
+  color: #c4b550;
+  text-decoration: none;
+}
+nav li a:hover {
+  color: #E3E41F;
+  background: #5a6a50;
+}
+nav li:hover ul.dropdown {
+  display: block;
+}
+nav li ul.dropdown {
+  display: none;
+  list-style: none;
+  border-top: solid 1px #899281;
+  border-bottom: solid 1px #292d23;
+  border-left: solid 1px #899281;
+  border-right: solid 1px #292d23;
+  border-top: none;
+  padding: 0;
+  min-width: 150px;
+  background: #4c5844;
+  position: absolute;
+  top: 23px;
+  z-index: 1;
+}
+nav li ul.dropdown li {
+  display: block;
+}
+.window-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  max-width: 780px;
+  margin: 0 auto;
+}
+.window-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  max-width: 780px;
+}
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+.flex-row,
+.flex-column {
+  align-items: center;
+}
+/*** Borders ***/
+.border {
+  border-top: solid 1px #899281;
+  border-bottom: solid 1px #292d23;
+  border-left: solid 1px #899281;
+  border-right: solid 1px #292d23;
+}
+.border-inverted {
+  border-top: solid 1px #292d23;
+  border-bottom: solid 1px #899281;
+  border-left: solid 1px #292d23;
+  border-right: solid 1px #899281;
+}
+/*** Progress Bar ***/
+progress {
+  -webkit-appearance: none;
+  display: block;
+  width: 90%;
+  margin: 12px auto;
+  height: 26px;
+  border-top: solid 1px #292d23;
+  border-bottom: solid 1px #899281;
+  border-left: solid 1px #292d23;
+  border-right: solid 1px #899281;
+}
+progress::-webkit-progress-bar {
+  background: #3e4637;
+  padding: 4px;
+}
+progress::-webkit-progress-value {
+  height: 16px;
+  background: repeating-linear-gradient(to right, #96892D, #96892D 8px, #3e4637 1px, #3e4637 12px);
+}
+/*** Window ***/
+.window {
+  position: static;
+  background-color: #4c5844;
+  padding: 10px;
+  box-sizing: border-box;
+  margin: 0 0 20px;
+  max-width: 780px;
+}
+.window:not(.headless) {
+  padding-top: 28px;
+}
+.window:not(.headless):before {
+  position: relative;
+  top: -18px;
+  float: right;
+  width: 100%;
+  height: 18px;
+  line-height: 18px;
+  content: attr(name);
+  text-indent: 24px;
+  background-image: url("steamico.png"), url("minimize.png"), url("close.png");
+  background-repeat: no-repeat;
+  background-position: top left, top right 20px, top right;
+}
+.window:not(.no-resize)::after {
+  width: 12px;
+  height: 12px;
+  position: relative;
+  bottom: -7px;
+  right: -7px;
+  float: right;
+  content: '';
+  background-image: url("resize.png");
+}
+.window.half {
+  max-width: 380px;
+  width: 100%;
+  align-self: center;
+}
+.transcript {
+  background-color: #3e4637;
+  border-top: solid 1px #292d23;
+  border-bottom: solid 1px #899281;
+  border-left: solid 1px #292d23;
+  border-right: solid 1px #899281;
+  padding: 0 12px 12px;
+}
+.transcript p {
+  padding: 10px 5px;
+  margin: 0;
+}
+.transcript p.highlighted {
+  background-color: #4c5844;
+  border-radius: 5px;
+}
+.titlebar {
+  display: block;
+  height: 18px;
+  margin-bottom: 10px;
+}
+.titlebar::after {
+  float: right;
+  word-spacing: -3px;
+  content: url("minimize.png") " " url("close.png");
+}
+.titlebar.inactive::after {
+  content: url("minimize2.png") " " url("close2.png");
+}
+/*.inline-image {
+	border: solid 2px #7b8484;
+}*/
+/*** Scrollbar ***/
+::-webkit-scrollbar,
+::-webkit-scrollbar-corner {
+  width: 18px;
+  background-color: #5a6a50;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #4c5844;
+  border-top: solid 1px #899281;
+  border-bottom: solid 1px #292d23;
+  border-left: solid 1px #899281;
+  border-right: solid 1px #292d23;
+}
+::-webkit-scrollbar-button {
+  width: 18px;
+  height: 18px;
+  border-top: solid 1px #899281;
+  border-bottom: solid 1px #292d23;
+  border-left: solid 1px #899281;
+  border-right: solid 1px #292d23;
+  background: #4c5844;
+}
+::-webkit-scrollbar-button:active {
+  border-top: solid 1px #292d23;
+  border-bottom: solid 1px #899281;
+  border-left: solid 1px #292d23;
+  border-right: solid 1px #899281;
+}
+::-webkit-scrollbar-button:vertical:increment {
+  background: url("scroll_down.png") no-repeat center, #4c5844;
+}
+::-webkit-scrollbar-button:vertical:decrement {
+  background: url("scroll_up.png") no-repeat center, #4c5844;
+}
+::-webkit-scrollbar-button:horizontal:increment {
+  background: url("scroll_right.png") no-repeat center, #4c5844;
+}
+::-webkit-scrollbar-button:horizontal:decrement {
+  background: url("scroll_left.png") no-repeat center, #4c5844;
+}

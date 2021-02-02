@@ -1,0 +1,157 @@
+@light-primary: #4c5844;
+@almost-light-primary: #4a5942; // slight variant of light-primary
+@lighter-primary: #5a6a50;
+@dark-primary: #3e4637;
+@shadelight: #899281;
+@shadelighter: #b8c4ad;
+@shadedark: #292d23;
+
+@secondary: #c4b550;
+@darksecondary: #96892D;
+
+@window-width: 780px;
+@window-half: 380px;
+
+// window properties
+@default-pad: 10px;
+@titlebar-height: 18px;
+
+@import "steam/navbar.less";
+@import "steam/controls.less";
+@import "steam/slider.less";
+@import "steam/window.less";
+@import "steam/progressbar.less";
+@import "steam/scrollbar.less";
+
+
+/*** Borders ***/
+
+.border {
+	border-top: solid 1px @shadelight;
+    border-bottom: solid 1px @shadedark;
+    border-left: solid 1px @shadelight;
+    border-right: solid 1px @shadedark;
+}
+
+.border-inverted {
+	border-top: solid 1px @shadedark;
+	border-bottom: solid 1px @shadelight;
+	border-left: solid 1px @shadedark;
+	border-right: solid 1px @shadelight;
+}
+
+.inset {
+	background-color: @dark-primary;
+	.border-inverted();
+
+	code {background-color: @light-primary;}
+}
+
+.rounded {
+	border: none;
+	border-radius: 10px;
+}
+
+.inset .rounded {
+	background-color: @almost-light-primary;
+
+	code {background-color: @dark-primary;}
+}
+
+
+
+// basic flexbox classes 
+
+.flex-row {
+	display: flex;
+	flex-direction: row;
+}
+
+.flex-column {
+	display: flex;
+	flex-direction: column;
+}
+
+.flex-row, .flex-column {
+	align-items: flex-start;
+}
+
+// body
+
+body {
+	background-color: @dark-primary;
+	font-family: "Trebuchet MS", "Verdana", sans-serif;
+	color: #d8ded3;
+	font-size: 14px;
+
+	image-rendering: pixelated;
+
+	margin: 20px 20px;
+}
+
+::selection {
+	background-color: @darksecondary;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 3px 12px 12px;
+}
+
+h1, h2 {
+	color: @secondary;
+}
+
+h1 {
+	font-size: 18px;
+}
+h2 {
+	font-size: 16px;
+}
+
+p {
+	//font-family: "Verdana";
+	text-align: left;
+	margin: 12px 12px 12px;
+	color: #d8ded3;
+}
+
+fieldset {
+	.border-inverted();
+}
+
+code {
+	background: @dark-primary;
+	padding: 0 3px;
+
+}
+
+hr {
+	margin: 20px 0;
+    border: none;
+    height: 1px;
+	background-color: @dark-primary;
+}
+
+img {
+	object-fit: contain;
+	margin: 2px;
+}
+
+main, .window-column {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: stretch;
+
+	max-width: @window-width;
+	margin: 0 auto;
+}
+
+.window-row {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: stretch;
+
+	max-width: @window-width;
+}

@@ -1,0 +1,41 @@
+
+@import "../steam_shared.less";
+// color overrides 
+@light-primary: #212121;
+@almost-light-primary: #212121; // just keep it the same
+@lighter-primary: #181818;
+@dark-primary: #080808;
+@shadelight: #323232;
+@shadedark: #080808;
+
+@secondary: #F0B43F;
+@darksecondary: #96892D;
+
+@window-width: 780px;
+@window-half: 380px;
+
+.window {
+	.border();
+}
+
+.window::before {
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-size: 12px;
+	color: white;
+	font-weight: bold;
+}
+
+img {
+	border: solid 2px #7b8484;
+}
+
+a {
+	text-decoration: none;
+    //color: #f8fcf4;
+	color: #e03644;
+	&:hover {
+		text-decoration: underline;
+        //color: #ffffff;
+	}
+}

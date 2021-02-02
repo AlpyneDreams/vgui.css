@@ -1,0 +1,60 @@
+/*** Range Slider ***/
+
+input[type=range] {
+	appearance: none;
+	min-width: 200px;
+	color: @shadelighter;
+	background: none;
+
+	// so that pos: absolute works for :before and :after
+	position: relative;
+	&::before, &::after {
+		display: inline;
+		position: absolute;
+		font-size: 10px;
+		top: 10px;
+		font-family: monospace;
+	}
+	&::before {
+		left: 0;
+		content: attr(min);
+	}
+	&::after {
+		right: 0;
+		content: attr(max);
+	}
+
+	&::-webkit-slider-runnable-track {
+		background: black;
+		height: 4px;
+		.border-inverted();
+		margin: 6px 0;
+	}
+
+	&::-webkit-slider-thumb {
+		appearance: none;
+		background: @light-primary;
+		.border();
+		width: 8px;
+		height: 16px;
+		position: relative;
+		top: -7px;
+	}
+	&:focus {
+		outline: 1px dotted black;
+		outline-offset: 2px;
+	}
+}
+
+// step marks on range sliders
+input[type=range].ticks {
+	background: url("sliderticks.png") repeat-x;
+	background-position: bottom left 2px;
+	// adjust background-size width to about 1px less than your width divided by your increment
+	background-size: 19px 5px;
+
+	// move labels down slightly to fit in ticks
+	&::before, &::after {
+		top: 16px; 
+	}
+}

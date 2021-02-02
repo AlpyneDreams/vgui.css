@@ -1,0 +1,34 @@
+/*** Scrollbar ***/
+
+::-webkit-scrollbar, ::-webkit-scrollbar-corner {
+    width: 18px;
+	background-color: @lighter-primary;
+}
+
+// thumb: the actual draggy thing
+::-webkit-scrollbar-thumb {
+	background-color: @light-primary;
+    .border();
+}
+
+::-webkit-scrollbar-button  {
+	width: 18px;
+	height: 18px;
+
+	.border();
+	&:active {.border-inverted();}
+
+	background: @light-primary;
+
+	&:vertical {
+		&:increment {background: url("scroll_down.png") no-repeat center, @light-primary;}
+		&:decrement {background: url("scroll_up.png") no-repeat center, @light-primary;}
+	}
+
+	&:horizontal {
+		&:increment {background: url("scroll_right.png") no-repeat center, @light-primary;}
+		&:decrement {background: url("scroll_left.png") no-repeat center, @light-primary;}
+	}
+
+
+}
