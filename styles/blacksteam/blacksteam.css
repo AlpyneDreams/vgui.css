@@ -458,6 +458,9 @@ main,
   border-left: solid 1px #323232;
   border-right: solid 1px #080808;
 }
+input[type=checkbox] {
+  background: #080808;
+}
 .window::before {
   text-transform: uppercase;
   letter-spacing: 2px;
