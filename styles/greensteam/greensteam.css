@@ -53,7 +53,8 @@ input[type=button],
 input[type=reset],
 input[type=submit],
 input[type=color],
-::-webkit-file-upload-button {
+::-webkit-file-upload-button,
+.greensteam-button {
   color: white;
   background-color: #4c5844;
   height: 25px;
@@ -72,7 +73,8 @@ input[type=button]:active,
 input[type=reset]:active,
 input[type=submit]:active,
 input[type=color]:active,
-::-webkit-file-upload-button:active {
+::-webkit-file-upload-button:active,
+.greensteam-button:active {
   border-top: solid 1px #292d23;
   border-bottom: solid 1px #899281;
   border-left: solid 1px #292d23;
@@ -83,7 +85,8 @@ input[type=button]:focus,
 input[type=reset]:focus,
 input[type=submit]:focus,
 input[type=color]:focus,
-::-webkit-file-upload-button:focus {
+::-webkit-file-upload-button:focus,
+.greensteam-button:focus {
   outline: 1px dashed #292d23;
   outline-offset: -4px;
 }
@@ -92,8 +95,47 @@ input[type=button] :not(input[type=color]),
 input[type=reset] :not(input[type=color]),
 input[type=submit] :not(input[type=color]),
 input[type=color] :not(input[type=color]),
-::-webkit-file-upload-button :not(input[type=color]) {
+::-webkit-file-upload-button :not(input[type=color]),
+.greensteam-button :not(input[type=color]) {
   padding-right: 5%;
+}
+::file-selector-button {
+  color: white;
+  background-color: #4c5844;
+  height: 25px;
+  min-width: 75px;
+  cursor: pointer;
+  border-top: solid 1px #899281;
+  border-bottom: solid 1px #292d23;
+  border-left: solid 1px #899281;
+  border-right: solid 1px #292d23;
+  font-weight: lighter;
+  text-align: left;
+  -webkit-font-smoothing: none;
+}
+::file-selector-button:active {
+  border-top: solid 1px #292d23;
+  border-bottom: solid 1px #899281;
+  border-left: solid 1px #292d23;
+  border-right: solid 1px #899281;
+}
+::file-selector-button:focus {
+  outline: 1px dashed #292d23;
+  outline-offset: -4px;
+}
+::file-selector-button :not(input[type=color]) {
+  padding-right: 5%;
+}
+button:active,
+input[type=button]:active,
+input[type=reset]:active,
+input[type=submit]:active,
+input[type=color]:active,
+::file-selector-button:active {
+  border-top: solid 1px #292d23;
+  border-bottom: solid 1px #899281;
+  border-left: solid 1px #292d23;
+  border-right: solid 1px #899281;
 }
 input[type=checkbox] {
   vertical-align: middle;
@@ -169,6 +211,28 @@ textarea:focus {
   filter: brightness(0) invert() brightness(70%);
 }
 /*** Range Slider ***/
+.greensteam-slider-track {
+  background: black;
+  height: 4px;
+  border-top: solid 1px #292d23;
+  border-bottom: solid 1px #899281;
+  border-left: solid 1px #292d23;
+  border-right: solid 1px #899281;
+  margin: 6px 0;
+}
+.greensteam-slider-thumb {
+  appearance: none;
+  background: #4c5844;
+  border-top: solid 1px #899281;
+  border-bottom: solid 1px #292d23;
+  border-left: solid 1px #899281;
+  border-right: solid 1px #292d23;
+  width: 8px;
+  height: 16px;
+  position: relative;
+  top: -7px;
+  border-radius: 0;
+}
 input[type=range] {
   appearance: none;
   min-width: 200px;
@@ -201,6 +265,20 @@ input[type=range]::-webkit-slider-runnable-track {
   border-right: solid 1px #899281;
   margin: 6px 0;
 }
+input[type=range]::-moz-range-track,
+input[type=range]::-moz-range-progress {
+  background: black;
+  height: 4px;
+  border-top: solid 1px #292d23;
+  border-bottom: solid 1px #899281;
+  border-left: solid 1px #292d23;
+  border-right: solid 1px #899281;
+  margin: 6px 0;
+}
+input[type=range]::-moz-range-track,
+input[type=range]::-moz-range-progress {
+  height: 2px;
+}
 input[type=range]::-webkit-slider-thumb {
   appearance: none;
   background: #4c5844;
@@ -212,6 +290,20 @@ input[type=range]::-webkit-slider-thumb {
   height: 16px;
   position: relative;
   top: -7px;
+  border-radius: 0;
+}
+input[type=range]::-moz-range-thumb {
+  appearance: none;
+  background: #4c5844;
+  border-top: solid 1px #899281;
+  border-bottom: solid 1px #292d23;
+  border-left: solid 1px #899281;
+  border-right: solid 1px #292d23;
+  width: 8px;
+  height: 16px;
+  position: relative;
+  top: -7px;
+  border-radius: 0;
 }
 input[type=range]:focus {
   outline: 1px dotted black;
@@ -273,15 +365,18 @@ input[type=range].ticks::after {
 /*** Progress Bar ***/
 progress {
   -webkit-appearance: none;
+  appearance: none;
   display: block;
   width: 90%;
   margin: 12px auto;
   margin-top: 18px;
   height: 26px;
+  box-sizing: border-box;
   border-top: solid 1px #292d23;
   border-bottom: solid 1px #899281;
   border-left: solid 1px #292d23;
   border-right: solid 1px #899281;
+  background: #3e4637;
 }
 progress::-webkit-progress-bar {
   background: #3e4637;
@@ -290,6 +385,12 @@ progress::-webkit-progress-bar {
 progress::-webkit-progress-value {
   height: 16px;
   background: repeating-linear-gradient(to right, #96892D, #96892D 8px, #3e4637 1px, #3e4637 12px);
+}
+progress::-moz-progress-bar {
+  height: 16px;
+  background: repeating-linear-gradient(to right, #96892D, #96892D 8px, #3e4637 1px, #3e4637 12px);
+  margin-top: 4px;
+  margin-left: 4px;
 }
 /*** Scrollbar ***/
 ::-webkit-scrollbar,

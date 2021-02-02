@@ -3,6 +3,7 @@
 progress {
 	// [-webkit-appearance: progress-bar] overwrites everything by default
 	-webkit-appearance: none;
+	appearance: none;
 
 	display: block;
 	width: 90%;
@@ -10,8 +11,11 @@ progress {
 	margin-top: 18px;
 
 	height: 26px;
+	box-sizing: border-box;
 
 	.border-inverted();
+
+	background: @dark-primary;
 
 	&::-webkit-progress-bar {
 		background: @dark-primary;
@@ -27,6 +31,18 @@ progress {
 			@dark-primary 1px,
 			@dark-primary 12px
 		);
-
+	}
+	
+	&::-moz-progress-bar {
+		height: 16px;
+		background: repeating-linear-gradient(
+			to right,
+			@darksecondary,
+			@darksecondary 8px,
+			@dark-primary 1px,
+			@dark-primary 12px
+		);
+		margin-top: 4px;
+		margin-left: 4px;
 	}
 }

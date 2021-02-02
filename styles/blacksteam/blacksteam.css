@@ -192,7 +192,9 @@ input[type=range]::after {
   right: 0;
   content: attr(max);
 }
-input[type=range]::-webkit-slider-runnable-track {
+input[type=range]::-webkit-slider-runnable-track,
+input[type=range]::-moz-range-track,
+input[type=range]::-moz-range-progress {
   background: black;
   height: 4px;
   border-top: solid 1px #080808;
@@ -201,7 +203,8 @@ input[type=range]::-webkit-slider-runnable-track {
   border-right: solid 1px #323232;
   margin: 6px 0;
 }
-input[type=range]::-webkit-slider-thumb {
+input[type=range]::-webkit-slider-thumb,
+input[type=range]::-moz-range-thumb {
   appearance: none;
   background: #212121;
   border-top: solid 1px #323232;
@@ -212,6 +215,7 @@ input[type=range]::-webkit-slider-thumb {
   height: 16px;
   position: relative;
   top: -7px;
+  border-radius: 0;
 }
 input[type=range]:focus {
   outline: 1px dotted black;

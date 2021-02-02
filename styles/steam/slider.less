@@ -1,5 +1,23 @@
 /*** Range Slider ***/
 
+.greensteam-slider-track {
+	background: black;
+	height: 4px;
+	.border-inverted();
+	margin: 6px 0;
+}
+
+.greensteam-slider-thumb {
+	appearance: none;
+	background: @light-primary;
+	.border();
+	width: 8px;
+	height: 16px;
+	position: relative;
+	top: -7px;
+	border-radius: 0;
+}
+
 input[type=range] {
 	appearance: none;
 	min-width: 200px;
@@ -24,21 +42,24 @@ input[type=range] {
 		content: attr(max);
 	}
 
+
+
 	&::-webkit-slider-runnable-track {
-		background: black;
-		height: 4px;
-		.border-inverted();
-		margin: 6px 0;
+		.greensteam-slider-track();
+	}
+	&::-moz-range-track, &::-moz-range-progress {
+		.greensteam-slider-track();
+	}
+	&::-moz-range-track, &::-moz-range-progress {
+		height: 2px;
 	}
 
 	&::-webkit-slider-thumb {
-		appearance: none;
-		background: @light-primary;
-		.border();
-		width: 8px;
-		height: 16px;
-		position: relative;
-		top: -7px;
+		.greensteam-slider-thumb();
+	}
+
+	&::-moz-range-thumb {
+		.greensteam-slider-thumb();
 	}
 	&:focus {
 		outline: 1px dotted black;

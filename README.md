@@ -6,7 +6,7 @@ To use, install the `styles` folder onto your server, and add the `<link>` line 
 
 See `demo_greensteam.html` for example usage. Semantics are exactly the same for blacksteam.
 
-To edit the styles, use [`lessc`](http://lesscss.org/usage/) on specific files or leave the [less-watch-compiler](https://www.npmjs.com/package/less-watch-compiler) process running: `less-watch-compiler styles styles`, in the root folder.
+To edit the styles, use [`lessc`](http://lesscss.org/usage/) on specific files or leave the [less-watch-compiler](https://www.npmjs.com/package/less-watch-compiler) process running: `less-watch-compiler --main-file greensteam/greensteam.less styles styles`, in the root folder.
 
 ### Online Demo
 
