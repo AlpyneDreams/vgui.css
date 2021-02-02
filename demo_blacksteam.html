@@ -96,41 +96,42 @@
 			</pre>
 			<br>
 			<fieldset class=flex-row>
+				<style>.space-controls > * { margin-bottom: 16px; }</style>
 				<legend>Form Controls</legend>
-				<div class=flex-column>
+				<div class="flex-column space-controls">
 					<button>Button</button>
 					<label><input type=checkbox> Checkbox</label>
-					<input type=color><br>
-					<input type=date value="1998-11-19"><br>
-					<input type=datetime-local value="1998-11-19T12:00"><br>
-					<input type=email placeholder="gaben@valvesoftware.com"><br>
-					<input type=file><br>
-					<input type=month value="1998-11"><br>
-					<input type=number value=0><br>
-					<input type=password value=hunter2><br>
-					<label><input type=radio name=radio1 value=opt1 checked> Radio 1</label>
-					<label><input type=radio name=radio1 value=opt2> Radio 2</label><br>
-					<input type=range min=0 max=10 value=5 step=0.1 style="width: 200px;""><br>
-					<input type=range class=ticks min=0 max=10 value=5 step=1 style="width: 200px;""><br>
+					<input type=color>
+					<input type=date value="1998-11-19">
+					<input type=datetime-local value="1998-11-19T12:00">
+					<input type=email placeholder="gaben@valvesoftware.com">
+					<input type=file>
+					<input type=month value="1998-11">
+					<input type=number value=0>
+					<input type=password value=hunter2>
+					<div>
+						<label><input type=radio name=radio1 value=opt1 checked> Radio 1</label><br>
+						<label><input type=radio name=radio1 value=opt2> Radio 2</label>
+					</div>
+					<input type=range min=0 max=10 value=5 step=0.1 style="width: 200px;"">
+					<input type=range class=ticks min=0 max=10 value=5 step=1 style="width: 200px;"">
 				</div>
-				<div class=flex-column>
-					<input type=reset><br>
-					<input type=search placeholder=Search...><br>
-					<input type=submit><br>
-					<input type=tel value=1-800-FLOWERS><br>
-					<input type=text placeholder="Text"><br>
-					<input type=time value="12:00"><br>
-					<input type=url placeholder="https://example.com/"><br>
-					<input type=week><br>
+				<div class="flex-column space-controls">
+					<input type=reset>
+					<input type=search placeholder=Search...>
+					<input type=submit>
+					<input type=tel value=1-800-FLOWERS>
+					<input type=text placeholder="Text">
+					<input type=time value="12:00">
+					<input type=url placeholder="https://example.com/">
+					<input type=week>
 					<textarea>Test</textarea>
-					<br>
 					<select>
 						<option value="volvo">Coke</option>
 						<option value="saab">Pepsi</option>
 						<option value="mercedes">Root Beer</option>
 						<option value="audi">RC Cola</option>
 					</select>
-					<br>
 					<input list="browsers" name="browser" id="browser">
 					<datalist id="browsers">
 						<option value="Edge">
