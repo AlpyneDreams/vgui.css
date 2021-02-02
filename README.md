@@ -11,7 +11,7 @@ See `demo_greensteam.html` for example usage. Semantics are exactly the same for
 ```
 Screenshots: (click to view)
 
-<img src="https://raw.githubusercontent.com/AlpyneDreams/greensteam.css/master/screenshots/greensteam1.png" width="450"> <img src="https://raw.githubusercontent.com/AlpyneDreams/greensteam.css/master/screenshots/greensteam2.png" width="450">
+<img src="https://raw.githubusercontent.com/AlpyneDreams/greensteam.css/master/screenshots/greensteam1.png" width="300"> <img src="https://raw.githubusercontent.com/AlpyneDreams/greensteam.css/master/screenshots/greensteam2.png" width="300">
 
 
 ## Blacksteam
@@ -20,4 +20,4 @@ Screenshots: (click to view)
 ```
 Screenshots: (click to view)
 
-<img src="https://raw.githubusercontent.com/AlpyneDreams/greensteam.css/master/screenshots/blacksteam1.png" width="450"> <img src="https://raw.githubusercontent.com/AlpyneDreams/greensteam.css/master/screenshots/blacksteam2.png" width="450">
+<img src="https://raw.githubusercontent.com/AlpyneDreams/greensteam.css/master/screenshots/blacksteam1.png" width="300"> <img src="https://raw.githubusercontent.com/AlpyneDreams/greensteam.css/master/screenshots/blacksteam2.png" width="300">
