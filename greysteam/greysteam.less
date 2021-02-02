@@ -1,0 +1,45 @@
+
+@import "../steam_shared.less";
+
+@light-primary: rgba(160, 160, 160, 0.75);
+@lighter-primary: rgba(160, 160, 160, 0.5);
+@dark-primary: rgba(0, 0, 0, 0.5);
+@shadelight: rgba(200, 200, 200, 1);
+@shadedark: rgba(40, 40, 40, 0.75);
+
+@secondary: white;
+@darksecondary: white;
+
+body {
+	background-image: url("hl2_background01.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	color: white;
+}
+
+p {
+	color: white;
+}
+
+.window {
+	border-radius: 10px;
+}
+
+.window:not(.headless):before {
+	background-image: none, url("minimize.png"), url("close.png");
+
+	text-transform: lowercase;
+	font-variant: small-caps;
+	text-indent: 10px;
+}
+
+a {
+	text-decoration: none;
+    //color: #f8fcf4;
+	color: #aaaaaa;
+	&:hover {
+		text-decoration: underline;
+        //color: #ffffff;
+	}
+}

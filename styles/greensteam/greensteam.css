@@ -344,14 +344,18 @@ progress::-webkit-progress-value {
   border-left: solid 1px #292d23;
   border-right: solid 1px #899281;
 }
-.inset {
+.inset,
+.box.inset,
+.widow.inset {
   background-color: #3e4637;
   border-top: solid 1px #292d23;
   border-bottom: solid 1px #899281;
   border-left: solid 1px #292d23;
   border-right: solid 1px #899281;
 }
-.inset code {
+.inset code,
+.box.inset code,
+.widow.inset code {
   background-color: #4c5844;
 }
 .rounded {
