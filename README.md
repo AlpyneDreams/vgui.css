@@ -10,8 +10,8 @@ To edit the styles, use [`lessc`](http://lesscss.org/usage/) on specific files o
 
 ### Online Demo
 
-- [Green Steam Demo](https://alpynedreams.github.io/greensteam.css/demo_greensteam)
-- [Black Steam Demo](https://alpynedreams.github.io/greensteam.css/demo_blacksteam)
+- [Green Steam Demo](https://alpynedreams.github.io/vgui.css/demo_greensteam)
+- [Black Steam Demo](https://alpynedreams.github.io/vgui.css/demo_blacksteam)
 
 ## Greensteam
 ```html
@@ -19,7 +19,7 @@ To edit the styles, use [`lessc`](http://lesscss.org/usage/) on specific files o
 ```
 Screenshots: (click to view)
 
-<img src="https://raw.githubusercontent.com/AlpyneDreams/greensteam.css/master/screenshots/greensteam1.png" width="300"> <img src="https://raw.githubusercontent.com/AlpyneDreams/greensteam.css/master/screenshots/greensteam2.png" width="300">
+<img src="https://raw.githubusercontent.com/AlpyneDreams/vgui.css/master/screenshots/greensteam1.png" width="300"> <img src="https://raw.githubusercontent.com/AlpyneDreams/vgui.css/master/screenshots/greensteam2.png" width="300">
 
 
 ## Blacksteam
@@ -28,4 +28,4 @@ Screenshots: (click to view)
 ```
 Screenshots: (click to view)
 
-<img src="https://raw.githubusercontent.com/AlpyneDreams/greensteam.css/master/screenshots/blacksteam1.png" width="300"> <img src="https://raw.githubusercontent.com/AlpyneDreams/greensteam.css/master/screenshots/blacksteam2.png" width="300">
+<img src="https://raw.githubusercontent.com/AlpyneDreams/vgui.css/master/screenshots/blacksteam1.png" width="300"> <img src="https://raw.githubusercontent.com/AlpyneDreams/vgui.css/master/screenshots/blacksteam2.png" width="300">
