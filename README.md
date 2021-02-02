@@ -2,13 +2,16 @@
 
 CSS Classic Green UI Skin from early Steam and Goldsource games, with a black variant.
 
-**Demo Pages**: [Green](https://alpynedreams.github.io/greensteam.css/demo_greensteam) and [Black](https://alpynedreams.github.io/greensteam.css/demo_blacksteam)
-
 To use, install the `styles` folder onto your server, and add the `<link>` line to your HTML file, changing the path if necessary.
 
 See `demo_greensteam.html` for example usage. Semantics are exactly the same for blacksteam.
 
 To edit the styles, use [`lessc`](http://lesscss.org/usage/) on specific files or leave the [less-watch-compiler](https://www.npmjs.com/package/less-watch-compiler) process running: `less-watch-compiler styles styles`, in the root folder.
+
+### Online Demo
+
+- [Green Steam Demo](https://alpynedreams.github.io/greensteam.css/demo_greensteam)
+- [Black Steam Demo](https://alpynedreams.github.io/greensteam.css/demo_blacksteam)
 
 ## Greensteam
 ```html
