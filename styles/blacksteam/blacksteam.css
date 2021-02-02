@@ -346,7 +346,7 @@ progress::-webkit-progress-value {
 }
 .inset,
 .box.inset,
-.widow.inset {
+.window.rounded {
   background-color: #080808;
   border-top: solid 1px #080808;
   border-bottom: solid 1px #323232;
@@ -355,10 +355,12 @@ progress::-webkit-progress-value {
 }
 .inset code,
 .box.inset code,
-.widow.inset code {
+.window.rounded code {
   background-color: #212121;
 }
-.rounded {
+.rounded,
+.box.rounded,
+.window.rounded {
   border: none;
   border-radius: 10px;
 }
